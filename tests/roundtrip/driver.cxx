@@ -4,9 +4,9 @@
 #include <libunicode/encoding.hxx>
 
 #include <cstdint>
+#include <iterator>
 #include <sstream>
 #include <string>
-#include <iterator>
 
 DEFINE_TEST("UTF-8: round trip")
 {
