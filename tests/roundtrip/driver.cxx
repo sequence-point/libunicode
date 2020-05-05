@@ -24,3 +24,20 @@ DEFINE_TEST("UTF-8: round trip")
     TEST_EQUAL(i, unicode);
   }
 }
+
+DEFINE_TEST("UTF-8: sequence")
+{
+  std::stringstream str;
+
+  unicode::utf8_encoder encoder;
+  unicode::utf8_decoder decoder;
+
+  encoder.encode(str, 0x300);
+  encoder.encode(str, 0x400);
+
+  auto unicode_0 = decoder.extract(str);
+  auto unicode_1 = decoder.extract(str);
+
+  TEST_EQUAL(unicode_0, 0x300);
+  TEST_EQUAL(unicode_1, 0x400);
+}
