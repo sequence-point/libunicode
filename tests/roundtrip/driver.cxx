@@ -6,6 +6,7 @@
 #include <cstdint>
 #include <sstream>
 #include <string>
+#include <iterator>
 
 DEFINE_TEST("UTF-8: round trip")
 {
@@ -17,8 +18,9 @@ DEFINE_TEST("UTF-8: round trip")
 
     encoder.encode(str, i);
 
-    auto string = str.str();
+    auto unicode = decoder.decode(std::istreambuf_iterator< char >{ str },
+                                  std::istreambuf_iterator< char >{});
 
-    TEST_EQUAL(i, decoder.decode(string.begin(), string.end()));
+    TEST_EQUAL(i, unicode);
   }
 }
