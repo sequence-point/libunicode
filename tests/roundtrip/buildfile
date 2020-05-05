@@ -1,0 +1,4 @@
+import libs = libunicode%lib{unicode}
+import test_libs = libunittest%lib{unittest}
+
+exe{driver}: {hxx ixx txx cxx}{**} $libs $test_libs testscript{**}
