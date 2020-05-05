@@ -5,10 +5,18 @@
 
 namespace unicode {
 
-class utf8_encoder {
+class encoder {
+public:
+  virtual ~encoder() = default;
+
+  virtual void
+  encode(std::ostream& o, std::uint32_t c) const = 0;
+};
+
+class utf8_encoder : public encoder {
 public:
   void
-  encode(std::ostream& o, std::uint32_t c) const;
+  encode(std::ostream& o, std::uint32_t c) const override;
 };
 
 } // namespace unicode

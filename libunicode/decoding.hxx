@@ -4,11 +4,24 @@
 #include <libunicode/unicode.hxx>
 
 #include <cstdint>
+#include <istream>
+#include <iterator>
 
 namespace unicode {
 
-class utf8_decoder {
+class decoder {
 public:
+  virtual ~decoder() = default;
+
+  virtual std::uint32_t
+  extract(std::istream& i) const = 0;
+};
+
+class utf8_decoder : public decoder {
+public:
+  std::uint32_t
+  extract(std::istream& i) const override;
+
   template< typename InputIterator >
   std::uint32_t
   decode(InputIterator& it, InputIterator const& end) const;
@@ -23,6 +36,7 @@ public:
 
 } // namespace unicode
 
+#include <libunicode/decoding.ixx>
 #include <libunicode/decoding.txx>
 
 #endif
