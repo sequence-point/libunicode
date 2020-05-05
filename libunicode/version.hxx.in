@@ -1,0 +1,36 @@
+#ifndef libunicode__version_hxx_
+#define libunicode__version_hxx_
+
+// The numeric version format is AAAAABBBBBCCCCCDDDE where:
+//
+// AAAAA - major version number
+// BBBBB - minor version number
+// CCCCC - bugfix version number
+// DDD   - alpha / beta (DDD + 500) version number
+// E     - final (0) / snapshot (1)
+//
+// When DDDE is not 0, 1 is subtracted from AAAAABBBBBCCCCC. For example:
+//
+// Version      AAAAABBBBBCCCCCDDDE
+//
+// 0.1.0        0000000001000000000
+// 0.1.2        0000000001000020000
+// 1.2.3        0000100002000030000
+// 2.2.0-a.1    0000200001999990010
+// 3.0.0-b.2    0000299999999995020
+// 2.2.0-a.1.z  0000200001999990011
+//
+#define LIBUNICODE_VERSION       $libunicode.version.project_number$ULL
+#define LIBUNICODE_VERSION_STR   "$libunicode.version.project$"
+#define LIBUNICODE_VERSION_ID    "$libunicode.version.project_id$"
+
+#define LIBUNICODE_VERSION_MAJOR $libunicode.version.major$
+#define LIBUNICODE_VERSION_MINOR $libunicode.version.minor$
+#define LIBUNICODE_VERSION_PATCH $libunicode.version.patch$
+
+#define LIBUNICODE_PRE_RELEASE   $libunicode.version.pre_release$
+
+#define LIBUNICODE_SNAPSHOT_SN   $libunicode.version.snapshot_sn$ULL
+#define LIBUNICODE_SNAPSHOT_ID   "$libunicode.version.snapshot_id$"
+
+#endif

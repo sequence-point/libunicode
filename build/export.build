@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libunicode/
+}
+
+export $out_root/libunicode/$import.target

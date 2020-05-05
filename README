@@ -1,0 +1,9 @@
+This package contains libunicode.
+
+libunicode is a lightweight library for C++ for encoding and decoding various
+Unicode formats (UTF-8, UTF-16 and UTF-32), and converting between them.
+
+See the LICENSE file for the distribution conditions.
+
+Questions, bugs, and any other feedback can be sent to
+support@sequence-point.se.

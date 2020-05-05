@@ -1,0 +1,11 @@
+: 1
+name: libunicode
+version: 0.1.0-a.0.z
+summary: unicode C++ library
+license: MIT
+description-file: README
+url: https://sequence-point.se/open-source/
+email: support@sequence-point.se
+depends: * build2 >= 0.12.0
+depends: * bpkg >= 0.12.0
+depends: libunittest >= 0.1.0

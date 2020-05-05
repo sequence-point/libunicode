@@ -1,0 +1,6 @@
+: 1
+summary: libunicode project repository
+
+:
+role: prerequisite
+location: https://github.com/sequence-point/libunittest.git##HEAD
