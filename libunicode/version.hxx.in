@@ -20,17 +20,17 @@
 // 3.0.0-b.2    0000299999999995020
 // 2.2.0-a.1.z  0000200001999990011
 //
-#define LIBUNICODE_VERSION       $libunicode.version.project_number$ULL
-#define LIBUNICODE_VERSION_STR   "$libunicode.version.project$"
-#define LIBUNICODE_VERSION_ID    "$libunicode.version.project_id$"
+#define LIBUNICODE_VERSION $libunicode.version.project_number$ULL
+#define LIBUNICODE_VERSION_STR "$libunicode.version.project$"
+#define LIBUNICODE_VERSION_ID "$libunicode.version.project_id$"
 
 #define LIBUNICODE_VERSION_MAJOR $libunicode.version.major$
 #define LIBUNICODE_VERSION_MINOR $libunicode.version.minor$
 #define LIBUNICODE_VERSION_PATCH $libunicode.version.patch$
 
-#define LIBUNICODE_PRE_RELEASE   $libunicode.version.pre_release$
+#define LIBUNICODE_PRE_RELEASE $libunicode.version.pre_release$
 
-#define LIBUNICODE_SNAPSHOT_SN   $libunicode.version.snapshot_sn$ULL
-#define LIBUNICODE_SNAPSHOT_ID   "$libunicode.version.snapshot_id$"
+#define LIBUNICODE_SNAPSHOT_SN $libunicode.version.snapshot_sn$ULL
+#define LIBUNICODE_SNAPSHOT_ID "$libunicode.version.snapshot_id$"
 
 #endif
