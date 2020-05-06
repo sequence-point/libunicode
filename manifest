@@ -8,4 +8,4 @@ url: https://sequence-point.se/open-source/
 email: support@sequence-point.se
 depends: * build2 >= 0.12.0
 depends: * bpkg >= 0.12.0
-depends: libunittest >= 0.1.0
+depends: libunittest ^0.1.0-
